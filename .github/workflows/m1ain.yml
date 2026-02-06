@@ -1,0 +1,511 @@
+🐶Бобик🐶
+arbalet500
+🐘 Слоник
+
+https://tria.ge/dashboard
+Автоматически проверенные VPN ключи Только рабочие серверы • Обновление каждые 3 часа • Бесплатно
+Изображение
+аккаунты ботов
+1
+Для проверки на вирусы)
+Ссылки на лабы
+конфиги для гитхаб
+8 ядер 32 оперативки
+Изображение
+VPN
+Тестовые Сервера
+RDP от GitHub
+🐶Бобик🐶
+TC
+ — 30.07.2025 20:55
+конфиги для гитхаб
+🐶Бобик🐶
+TC
+ — 30.07.2025 20:56
+name: Ubuntu RDP
+
+on: workflow_dispatch
+
+jobs:
+  setup-ubuntu-rdp:
+
+ubuntu-rdp.yml
+8 кб
+name: Free 
+
+on: workflow_dispatch
+
+jobs:
+  setup-rdp-tunnel:
+
+Windows.yml
+6 кб
+🐶Бобик🐶
+TC
+ — 01.08.2025 18:42
+#!/usr/bin/env python3
+"""
+🚀 Настройка Ubuntu RDP с Playit в Google Colab
+==============================================
+Запустите этот скрипт в ячейке Colab: !python colab-rdp.py
+"""
+
+colab-rdp.py
+13 кб
+#!/bin/bash
+
+echo "🚀 Настройка Ubuntu RDP с Playit в Gitpod"
+echo "=========================================="
+
+# Исправляем конфликт с Microsoft репозиторием
+
+gitpod-rdp.sh
+7 кб
+🐶Бобик🐶
+TC
+ — 01.08.2025 21:54
+#!/usr/bin/env python3
+"""
+🚀 Настройка Ubuntu RDP с KDE Plasma и Playit в Google Colab
+===========================================================
+Запустите этот скрипт в ячейке Colab: !python colab-rdp.py
+"""
+
+colab-rdp.py
+45 кб
+🐶Бобик🐶
+TC
+ — 02.08.2025 16:09
+xfe
+#!/bin/bash
+
+echo "🚀 Настройка Ubuntu RDP для Google Colab (без пароля)"
+echo "===================================================="
+
+# Обновляем систему
+
+colab-rdp.sh
+6 кб
+🐶Бобик🐶
+TC
+ — 02.08.2025 21:28
+#!/usr/bin/env python3
+"""
+🚀 Настройка Ubuntu RDP с Playit в Google Colab
+==============================================
+Запустите этот скрипт в ячейке Colab: !python colab-rdp.py
+"""
+
+colab-rdp.py
+13 кб
+🐶Бобик🐶
+TC
+ — 18.08.2025 0:01
+bore не playit
+#!/usr/bin/env python3
+"""
+🚀 Настройка Ubuntu RDP с Playit в Google Colab
+==============================================
+Запустите этот скрипт в ячейке Colab: !python colab-rdp.py
+"""
+
+colab-rdp.py
+14 кб
+🐶Бобик🐶
+TC
+ — 18.08.2025 0:08
+sdfjwsfhd289@outlook.com
+ 
+$0sM|sD~z7
+ 
+🐶Бобик🐶
+TC
+ — 24.08.2025 0:07
+Ещё 1 метод
+в github code spaces вписываем
+ 
+sed -i 's/\r$//' setup_windows_vps.sh
+
+chmod +x setup_windows_vps.sh
+
+./setup_windows_vps.sh
+и файл туда закинуть сначало
+#!/usr/bin/env bash
+
+# Цвета для красивого вывода
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+
+setup_windows_vps.sh
+24 кб
+🐶Бобик🐶
+TC
+ — 26.08.2025 23:13
+бля это с bore
+name: Free RDP with Bore
+
+on: workflow_dispatch
+
+jobs:
+  setup-rdp-tunnel:
+
+Windows-bore.yml
+13 кб
+🐶Бобик🐶
+TC
+ — 30.08.2025 10:44
+для телефона 
+ighguidfg904@outlook.com
+$0sM|sD~z7
+ 
+🐶Бобик🐶
+TC
+ — 30.08.2025 13:35
+jhgfuh98@outlook.com
+$0sM|sD~z7
+🐶Бобик🐶
+TC
+ — 04.09.2025 21:00
+версия с windows11 
+name: Free RDP with Bore
+
+on: workflow_dispatch
+
+jobs:
+  setup-rdp-tunnel:
+    runs-on: windows-2025
+    steps:
+    - name: Check out the repository
+      uses: actions/checkout@v2
+
+    - name: Download and Install Bore
+      run: |
+        Write-Host "📥 Скачиваем Bore для Windows..."
+        Invoke-WebRequest -Uri "https://github.com/ekzhang/bore/releases/download/v0.5.0/bore-v0.5.0-x86_64-pc-windows-msvc.zip" -OutFile "$env:USERPROFILE\bore.zip"
+        
+        Write-Host "📦 Распаковываем Bore..."
+        Expand-Archive -Path "$env:USERPROFILE\bore.zip" -DestinationPath "$env:USERPROFILE\bore" -Force
+        
+        Write-Host "🔧 Настраиваем Bore..."
+        Move-Item -Path "$env:USERPROFILE\bore\bore.exe" -Destination "$env:USERPROFILE\bore.exe" -Force
+        
+        Write-Host "✅ Bore установлен успешно!"
+        Start-Sleep -Seconds 3
+
+    - name: Enable Remote Desktop (RDP) and Sound with Full Settings
+      run: |
+        Write-Host "🖥️ Настраиваем RDP сервер..."
+        
+        # Полная настройка RDP
+        Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server' -Name "fDenyTSConnections" -Value 0
+        Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -Name "UserAuthentication" -Value 1
+        
+        # Настройка брандмауэра
+        Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
+        New-NetFirewallRule -DisplayName "Allow RDP" -Direction Inbound -Protocol TCP -LocalPort 3389 -Action Allow
+        
+        # Включение звука
+        Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -Name "fDisableAudio" -Value 0
+        Start-Service -Name "Audiosrv" -ErrorAction SilentlyContinue
+        Set-Service -Name "Audiosrv" -StartupType Automatic -ErrorAction SilentlyContinue
+        
+        # Включение сервиса терминалов
+        Start-Service -Name "TermService" -ErrorAction SilentlyContinue
+        Set-Service -Name "TermService" -StartupType Automatic -ErrorAction SilentlyContinue
+        gpupdate /force
+        
+        Write-Host "✅ RDP настроен успешно!"
+
+    - name: Set RDP Password
+      run: |
+        Write-Host "🔐 Устанавливаем пароль для RDP..."
+        Set-LocalUser -Name "runneradmin" -Password (ConvertTo-SecureString -AsPlainText "Magisk2024!@#GitLab" -Force)
+        Write-Host "✅ Пароль установлен!"
+    
+    - name: Download Programs and Setup
+      run: |
+        Write-Host "📦 Настраиваем программы и файлы..."
+        New-Item -Path "$env:USERPROFILE\Downloads" -ItemType Directory -Force
+        
+        Write-Host "📥 Скачиваем Discord..."
+        try {
+            Invoke-WebRequest -Uri "https://discord.com/api/downloads/distributions/app/installers/latest?channel=stable&platform=win&arch=x86" -OutFile "$env:USERPROFILE\Downloads\DiscordSetup.exe" -TimeoutSec 30
+            Start-Sleep -Seconds 5
+            
+            Write-Host "🚀 Устанавливаем Discord..."
+            Start-Process -FilePath "$env:USERPROFILE\Downloads\DiscordSetup.exe" -ArgumentList "-s" -Wait -NoNewWindow -ErrorAction SilentlyContinue
+            Start-Sleep -Seconds 10
+            
+            Write-Host "🔗 Создаем ярлык Discord..."
+            $WshShell = New-Object -comObject WScript.Shell
+            $Shortcut = $WshShell.CreateShortcut("$env:USERPROFILE\Desktop\Discord.lnk")
+            $Shortcut.TargetPath = "$env:LOCALAPPDATA\Discord\Discord.exe"
+            $Shortcut.Save()
+        } catch {
+            Write-Host "⚠️ Ошибка установки Discord: $($_.Exception.Message)"
+        }
+        
+        Write-Host "📥 Скачиваем Cursor AI..."
+        try {
+            Invoke-WebRequest -Uri "https://downloads.cursor.com/production/82ef0f61c01d079d1b7e5ab04d88499d5af500e3/win32/x64/user-setup/CursorUserSetup-x64-0.47.8.exe" -OutFile "$env:USERPROFILE\Downloads\CursorSetup.exe" -TimeoutSec 30
+        } catch {
+            Write-Host "⚠️ Ошибка скачивания Cursor: $($_.Exception.Message)"
+        }
+        
+        Write-Host "📥 Загружаем файлы с Dropbox..."
+        try {
+            Invoke-WebRequest -Uri "https://www.dropbox.com/scl/fi/omm8vuc3o1abtdub52ij2/discord.txt?rlkey=9ukyaduh4gu5hhb6o1dydr4k1&st=gvmrilg4&dl=1" -OutFile "$env:USERPROFILE\Downloads\discord.txt" -TimeoutSec 30
+            Invoke-WebRequest -Uri "https://www.dropbox.com/scl/fi/ox06ztofmpbuvshwrritx/.zip?rlkey=5exqz94rfcuf140zbcigwmdcg&st=1lnerd0w&dl=1" -OutFile "$env:USERPROFILE\Downloads\additional.zip" -TimeoutSec 30
+        } catch {
+            Write-Host "⚠️ Ошибка скачивания файлов: $($_.Exception.Message)"
+        }
+        
+        Write-Host "⌨️ Добавляем русскую раскладку..."
+        try {
+            Set-ItemProperty -Path "HKCU:\Keyboard Layout\Preload" -Name "1" -Value "00000409" -Type String -ErrorAction SilentlyContinue
+            Set-ItemProperty -Path "HKCU:\Keyboard Layout\Substitutes" -Name "00000409" -Value "00000419" -Type String -ErrorAction SilentlyContinue
+            Set-ItemProperty -Path "HKCU:\Keyboard Layout\Toggle" -Name "Hotkey" -Value "1" -Type String -ErrorAction SilentlyContinue
+            Set-ItemProperty -Path "HKCU:\Keyboard Layout\Toggle" -Name "Language Hotkey" -Value "1" -Type String -ErrorAction SilentlyContinue
+            Set-ItemProperty -Path "HKCU:\Keyboard Layout\Toggle" -Name "Layout Hotkey" -Value "3" -Type String -ErrorAction SilentlyContinue
+... (осталось: 123 строки)
+
+Windows-bore.yml
+13 кб
+🐶Бобик🐶
+TC
+ — 04.09.2025 21:29
+версия с windows11 но 128 ядер и 16 гигов памяти но реп только публичный
+name: Free RDP with Bore
+
+on: workflow_dispatch
+
+jobs:
+  setup-rdp-tunnel:
+
+Windows-bore.yml
+11 кб
+﻿
+name: Free RDP with Bore
+
+on: workflow_dispatch
+
+jobs:
+  setup-rdp-tunnel:
+    runs-on: windows-2025
+    steps:
+    - name: Check out the repository
+      uses: actions/checkout@v2
+
+    - name: Download and Install Bore
+      run: |
+        Write-Host "📥 Скачиваем Bore для Windows..."
+        Invoke-WebRequest -Uri "https://github.com/ekzhang/bore/releases/download/v0.5.0/bore-v0.5.0-x86_64-pc-windows-msvc.zip" -OutFile "$env:USERPROFILE\bore.zip"
+        
+        Write-Host "📦 Распаковываем Bore..."
+        Expand-Archive -Path "$env:USERPROFILE\bore.zip" -DestinationPath "$env:USERPROFILE\bore" -Force
+        
+        Write-Host "🔧 Настраиваем Bore..."
+        Move-Item -Path "$env:USERPROFILE\bore\bore.exe" -Destination "$env:USERPROFILE\bore.exe" -Force
+        
+        Write-Host "✅ Bore установлен успешно!"
+        Start-Sleep -Seconds 3
+
+    - name: Enable Remote Desktop (RDP) and Sound with Full Settings
+      run: |
+        Write-Host "🖥️ Настраиваем RDP сервер..."
+        
+        # Полная настройка RDP
+        Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server' -Name "fDenyTSConnections" -Value 0
+        Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -Name "UserAuthentication" -Value 1
+        
+        # Настройка брандмауэра
+        Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
+        New-NetFirewallRule -DisplayName "Allow RDP" -Direction Inbound -Protocol TCP -LocalPort 3389 -Action Allow
+        
+        # Включение звука
+        Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -Name "fDisableAudio" -Value 0
+        Start-Service -Name "Audiosrv" -ErrorAction SilentlyContinue
+        Set-Service -Name "Audiosrv" -StartupType Automatic -ErrorAction SilentlyContinue
+        
+        # Включение сервиса терминалов
+        Start-Service -Name "TermService" -ErrorAction SilentlyContinue
+        Set-Service -Name "TermService" -StartupType Automatic -ErrorAction SilentlyContinue
+        gpupdate /force
+        
+        Write-Host "✅ RDP настроен успешно!"
+
+    - name: Set RDP Password
+      run: |
+        Write-Host "🔐 Устанавливаем пароль для RDP..."
+        Set-LocalUser -Name "runneradmin" -Password (ConvertTo-SecureString -AsPlainText "Magisk2024!@#GitLab" -Force)
+        Write-Host "✅ Пароль установлен!"
+    
+    - name: Download Programs and Setup
+      run: |
+        Write-Host "📦 Настраиваем программы и файлы..."
+        New-Item -Path "$env:USERPROFILE\Downloads" -ItemType Directory -Force
+        
+        Write-Host "📥 Скачиваем Discord..."
+        try {
+            Invoke-WebRequest -Uri "https://discord.com/api/downloads/distributions/app/installers/latest?channel=stable&platform=win&arch=x86" -OutFile "$env:USERPROFILE\Downloads\DiscordSetup.exe" -TimeoutSec 30
+            Start-Sleep -Seconds 5
+            
+            Write-Host "🚀 Устанавливаем Discord..."
+            Start-Process -FilePath "$env:USERPROFILE\Downloads\DiscordSetup.exe" -ArgumentList "-s" -Wait -NoNewWindow -ErrorAction SilentlyContinue
+            Start-Sleep -Seconds 10
+            
+            Write-Host "🔗 Создаем ярлык Discord..."
+            $WshShell = New-Object -comObject WScript.Shell
+            $Shortcut = $WshShell.CreateShortcut("$env:USERPROFILE\Desktop\Discord.lnk")
+            $Shortcut.TargetPath = "$env:LOCALAPPDATA\Discord\Discord.exe"
+            $Shortcut.Save()
+        } catch {
+            Write-Host "⚠️ Ошибка установки Discord: $($_.Exception.Message)"
+        }
+        
+        Write-Host "📥 Скачиваем Cursor AI..."
+        try {
+            Invoke-WebRequest -Uri "https://downloads.cursor.com/production/82ef0f61c01d079d1b7e5ab04d88499d5af500e3/win32/x64/user-setup/CursorUserSetup-x64-0.47.8.exe" -OutFile "$env:USERPROFILE\Downloads\CursorSetup.exe" -TimeoutSec 30
+        } catch {
+            Write-Host "⚠️ Ошибка скачивания Cursor: $($_.Exception.Message)"
+        }
+        
+        Write-Host "📥 Загружаем файлы с Dropbox..."
+        try {
+            Invoke-WebRequest -Uri "https://www.dropbox.com/scl/fi/omm8vuc3o1abtdub52ij2/discord.txt?rlkey=9ukyaduh4gu5hhb6o1dydr4k1&st=gvmrilg4&dl=1" -OutFile "$env:USERPROFILE\Downloads\discord.txt" -TimeoutSec 30
+            Invoke-WebRequest -Uri "https://www.dropbox.com/scl/fi/ox06ztofmpbuvshwrritx/.zip?rlkey=5exqz94rfcuf140zbcigwmdcg&st=1lnerd0w&dl=1" -OutFile "$env:USERPROFILE\Downloads\additional.zip" -TimeoutSec 30
+        } catch {
+            Write-Host "⚠️ Ошибка скачивания файлов: $($_.Exception.Message)"
+        }
+        
+        Write-Host "⌨️ Добавляем русскую раскладку..."
+        try {
+            Set-ItemProperty -Path "HKCU:\Keyboard Layout\Preload" -Name "1" -Value "00000409" -Type String -ErrorAction SilentlyContinue
+            Set-ItemProperty -Path "HKCU:\Keyboard Layout\Substitutes" -Name "00000409" -Value "00000419" -Type String -ErrorAction SilentlyContinue
+            Set-ItemProperty -Path "HKCU:\Keyboard Layout\Toggle" -Name "Hotkey" -Value "1" -Type String -ErrorAction SilentlyContinue
+            Set-ItemProperty -Path "HKCU:\Keyboard Layout\Toggle" -Name "Language Hotkey" -Value "1" -Type String -ErrorAction SilentlyContinue
+            Set-ItemProperty -Path "HKCU:\Keyboard Layout\Toggle" -Name "Layout Hotkey" -Value "3" -Type String -ErrorAction SilentlyContinue
+        } catch {
+            Write-Host "⚠️ Ошибка настройки раскладки: $($_.Exception.Message)"
+        }
+        
+        Write-Host "🎤 Включаем микрофон..."
+        try {
+            Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\microphone" -Name "Value" -Value "Allow" -Type String -ErrorAction SilentlyContinue
+        } catch {
+            Write-Host "⚠️ Ошибка настройки микрофона: $($_.Exception.Message)"
+        }
+        
+        Write-Host "✅ Установка программ завершена!"
+
+    - name: Start Bore Tunnel and Keep Alive
+      run: |
+        Write-Host "🚀 Запускаем Bore туннель для RDP..."
+        
+        # Проверяем, что RDP работает
+        $rdpService = Get-Service -Name "TermService" -ErrorAction SilentlyContinue
+        if ($rdpService.Status -ne "Running") {
+            Write-Host "⚠️ RDP сервис не запущен, запускаем..."
+            Start-Service -Name "TermService" -ErrorAction SilentlyContinue
+        }
+        
+        # Запускаем Bore туннель в фоне с перенаправлением вывода
+        Write-Host "🔗 Создаем туннель на bore.pub..."
+        $boreJob = Start-Job -ScriptBlock {
+            & "$env:USERPROFILE\bore.exe" local 3389 --to bore.pub
+        }
+        
+        Start-Sleep -Seconds 15
+        
+        # Проверяем статус job
+        $jobState = Get-Job -Id $boreJob.Id | Select-Object -ExpandProperty State
+        if ($jobState -eq "Running") {
+            Write-Host "✅ Bore туннель успешно запущен в фоне!"
+            
+            # Пытаемся получить вывод для адреса
+            $jobOutput = Receive-Job -Id $boreJob.Id -Keep
+            if ($jobOutput) {
+                Write-Host "📋 Вывод Bore:"
+                $jobOutput | ForEach-Object { Write-Host $_ }
+            }
+        } else {
+            Write-Host "❌ Ошибка запуска Bore job, пробуем альтернативный способ..."
+            
+            # Альтернативный запуск через Start-Process
+            $boreProcess = Start-Process -FilePath "$env:USERPROFILE\bore.exe" -ArgumentList "local", "3389", "--to", "bore.pub" -WindowStyle Hidden -PassThru
+            Start-Sleep -Seconds 10
+            
+            if ($boreProcess -and !$boreProcess.HasExited) {
+                Write-Host "✅ Bore запущен через Start-Process!"
+            }
+        }
+        
+        # Выводим информацию для подключения
+        Write-Host ""
+        Write-Host "=" * 50
+        Write-Host "📋 ИНФОРМАЦИЯ ДЛЯ RDP ПОДКЛЮЧЕНИЯ"
+        Write-Host "=" * 50
+        Write-Host "👤 Имя пользователя: runneradmin"
+        Write-Host "🔐 Пароль: Magisk2024!@#GitLab"
+        Write-Host "� Локаольный порт: 3389"
+        Write-Host "🌐 Публичный адрес: bore.pub:[случайный_порт]"
+        Write-Host "💡 Адрес показан выше в логах Bore"
+        Write-Host "🖥️ Используйте любой RDP клиент для подключения"
+        Write-Host "=" * 50
+        Write-Host ""
+        
+        Write-Host "⏰ Поддерживаем работу туннеля..."
+        Write-Host "🛑 Для остановки прервите выполнение workflow"
+        Write-Host "📊 Туннель будет работать в течение ~6 часов"
+        
+        # Основной цикл поддержания работы
+        $startTime = Get-Date
+        $maxRunTime = New-TimeSpan -Hours 5 -Minutes 50
+        $lastCheck = Get-Date
+        
+        while ((Get-Date) - $startTime -lt $maxRunTime) {
+            try {
+                # Проверяем каждые 2 минуты
+                if ((Get-Date) - $lastCheck -gt (New-TimeSpan -Minutes 2)) {
+                    
+                    # Проверяем Bore job
+                    $currentJobState = Get-Job -Id $boreJob.Id -ErrorAction SilentlyContinue | Select-Object -ExpandProperty State
+                    if ($currentJobState -ne "Running") {
+                        Write-Host "⚠️ Bore job остановлен, перезапускаем..."
+                        Remove-Job -Id $boreJob.Id -Force -ErrorAction SilentlyContinue
+                        
+                        $boreJob = Start-Job -ScriptBlock {
+                            & "$env:USERPROFILE\bore.exe" local 3389 --to bore.pub
+                        }
+                        Start-Sleep -Seconds 10
+                        
+                        # Показываем новый адрес
+                        $newOutput = Receive-Job -Id $boreJob.Id -Keep
+                        if ($newOutput) {
+                            Write-Host "🔗 Новый адрес Bore:"
+                            $newOutput | ForEach-Object { Write-Host $_ }
+                        }
+                    }
+                    
+                    # Проверяем RDP сервис
+                    $rdpService = Get-Service -Name "TermService" -ErrorAction SilentlyContinue
+                    if ($rdpService.Status -ne "Running") {
+                        Write-Host "⚠️ RDP сервис остановлен, перезапускаем..."
+                        Start-Service -Name "TermService" -ErrorAction SilentlyContinue
+                    }
+                    
+                    $lastCheck = Get-Date
+                    Write-Host "✅ Проверка завершена - $(Get-Date -Format 'HH:mm:ss')"
+                }
+                
+                Start-Sleep -Seconds 30
+                
+            } catch {
+                Write-Host "❌ Ошибка в цикле мониторинга: $($_.Exception.Message)"
+                Start-Sleep -Seconds 60
+            }
+        }
+        
+        Write-Host "⏰ Время выполнения истекло, завершаем работу..."
+        Remove-Job -Id $boreJob.Id -Force -ErrorAction SilentlyContinue
